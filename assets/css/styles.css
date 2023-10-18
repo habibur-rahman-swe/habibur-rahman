@@ -299,10 +299,19 @@ img {
 /* Show menu */
 .show-menu {
   top: 0;
+  z-index: 15;
 }
 
 /* Add shadow header */
-
+.shadow-header {
+  box-shadow: 0 1px 16px hsla(0, 0%, 0%, 0.12);
+  position: fixed;
+  width: 100%;
+  background-color: var(--white-color);
+  z-index: 20;
+  transition: background-color;
+  transition-duration: 500ms;
+}
 
 /* Active link */
 
@@ -406,8 +415,48 @@ img {
   background: linear-gradient(90deg, hsla(14, 98%, 50%, .3), hsla(14, 98%, 50%, 0));
 }
 
-/* Animate scroll icon */
+.home__scroll {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
 
+.home__scroll-text {
+  display: none;
+}
+
+.home__scroll-box {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color .4s;
+}
+
+.home__scroll-box i {
+  animation: scroll-down 3s infinite;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%{
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+  50%{
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(.6rem);
+    opacity: 0;
+  }
+}
 
 /*=============== BUTTON ===============*/
 
