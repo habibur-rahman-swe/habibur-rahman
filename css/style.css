@@ -49,6 +49,9 @@ h1, h2, h5, p {
 }
 
 #hero__animation__img {
-    background-image: ;
+    background-image: var(--tl-1);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
 }
 
