@@ -67,6 +67,10 @@ tlBtn.onclick = function() {
     if (activeCorner === "top-left") {
         playClosingAnimation()
     } else {
+        trBtn.innerHTML = "Experience"
+        blBtn.innerHTML = "Projects"
+        brBtn.innerHTML = "Contact"
+
         // setting activeCorner
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr; <br/> About"
@@ -98,6 +102,80 @@ trBtn.onclick = function() {
     if (activeCorner === "top-right") {
         playClosingAnimation()
     } else {
+        tlBtn.innerHTML = "About"
+        blBtn.innerHTML = "Projects"
+        brBtn.innerHTML = "Contact"
+        
+        // setting activeCorner
+        activeCorner = "top-left";
+        tlBtn.innerHTML = "&uarr; <br/> About"
+
+        handleWindowResize();
+        playAnimation("animate-top-left", "reverse-animate-top-left");
+
+        // Change background color
+        trBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
+        blBtn.style.background = bgColor;
+        tlBtn.style.background = bgColorAlt;
+
+        // Change text color
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColor;
+        blBtn.style.color = textColor;
+        tlBtn.style.textColorAlt = textColorAlt;
+
+        // Change position of corner content
+        trContent.style.transform = trHidden;
+        brContent.style.transform = brHidden;
+        blContent.style.transform = blHidden;
+        tlContent.style.transform = tlActive;
+    }
+}
+
+tlBtn.onclick = function() {
+    if (activeCorner === "boottom-left") {
+        playClosingAnimation()
+    } else {
+        tlBtn.innerHTML = "About"
+        blBtn.innerHTML = "Projects"
+        brBtn.innerHTML = "Contact"
+        
+        // setting activeCorner
+        activeCorner = "top-left";
+        tlBtn.innerHTML = "&uarr; <br/> About"
+
+        handleWindowResize();
+        playAnimation("animate-top-left", "reverse-animate-top-left");
+
+        // Change background color
+        trBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
+        blBtn.style.background = bgColor;
+        tlBtn.style.background = bgColorAlt;
+
+        // Change text color
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColor;
+        blBtn.style.color = textColor;
+        tlBtn.style.textColorAlt = textColorAlt;
+
+        // Change position of corner content
+        trContent.style.transform = trHidden;
+        brContent.style.transform = brHidden;
+        blContent.style.transform = blHidden;
+        tlContent.style.transform = tlActive;
+    }
+}
+
+trBtn.onclick = function() {
+    if (activeCorner === "top-right") {
+        playClosingAnimation()
+    } else {
+        tlBtn.innerHTML = "About"
+        blBtn.innerHTML = "Projects"
+        brBtn.innerHTML = "Contact"
+        
         // setting activeCorner
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr; <br/> About"
